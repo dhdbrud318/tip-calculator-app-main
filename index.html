@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <header class="header flex">
+      <div class="header-logo"><img src="./images/logo.svg" alt="Logo" /></div>
+    </header>
+
+    <form class="main grid container bg-white">
+      <div class="input_field flex">
+        <div class="input-bill icon-inside">
+          <label for="bill">Bill</label>
+          <img src="./images/icon-dollar.svg" alt="Dollar Icon" />
+          <input
+            type="text"
+            id="bill"
+            class="input input--bill flex bg-extralight-cyan"
+            maxlength="15"
+            size="10"
+            placeholder="0"
+            pattern="[0-9]+"
+          />
+        </div>
+
+        <div class="input-percent">
+          <label for="tip_percent">Select Tip %</label>
+          <div class="tipbtns grid" id="tip_percent">
+            <input type="button" class="btn" value="5%" name="tip_percent" />
+            <input type="button" class="btn" value="10%" name="tip_percent" />
+            <input type="button" class="btn" value="15%" name="tip_percent" />
+            <input type="button" class="btn" value="25%" name="tip_percent" />
+            <input type="button" class="btn" value="50%" name="tip_percent" />
+            <input
+              type="text"
+              class="input input--custom bg-extralight-cyan"
+              placeholder="Custom"
+              name="tip_percent"
+            />
+          </div>
+        </div>
+
+        <div class="input_people icon-inside">
+          <label for="percent">Number of People</label>
+          <img
+            src="./images/icon-person.svg"
+            aria-hidden="'true"
+            alt="Person Icon"
+          />
+          <input
+            type="number"
+            id="percent"
+            class="input input--people flex bg-extralight-cyan"
+            placeholder="0"
+            maxlength="15"
+          />
+        </div>
+      </div>
+      <div class="display-field bg-dark-cyan flex">
+        <div class="display-price-field flow">
+          <div class="display-container flex">
+            <p class="display-title fc-white">
+              Tip Amount <br /><span class="fs-sm fc-gray-cyan">/ person</span>
+            </p>
+            <p class="display-price fs-xl fc-str-cyan" id="tip_amount">0.00</p>
+          </div>
+          <div class="display-container flex">
+            <p class="display-title fc-white">
+              Total <br /><span class="fs-sm fc-gray-cyan">/ person</span>
+            </p>
+            <p class="display-price fs-xl fc-str-cyan" id="total">0.00</p>
+          </div>
+        </div>
+        <input
+          type="reset"
+          value="reset"
+          class="display-reset btn btn--reset uppercase"
+        />
+      </div>
+    </form>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
