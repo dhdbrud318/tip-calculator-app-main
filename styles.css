@@ -21,6 +21,7 @@
   --clr-shadow: 0, 0%, 59%;
   --clr-dark-btn: 183, 78%, 24%;
   --clr-btn-hover: 173, 61%, 77%;
+  --clr-warning: 13, 70%, 61%;
 
   --ff: "Space Mono", monospace;
 
@@ -111,6 +112,10 @@ textarea {
   text-transform: capitalize;
 }
 
+.invisible {
+  display: none;
+}
+
 .bg-str-cyan {
   background-color: hsl(var(--clr-stc));
 }
@@ -141,6 +146,10 @@ textarea {
 
 .bg-dark-cyan {
   background-color: hsl(var(--clr-dc));
+}
+
+.fc-warning {
+  color: hsl(var(--clr-warning));
 }
 
 .fc-str-cyan {
@@ -206,7 +215,8 @@ textarea {
 }
 
 .btn:focus,
-.btn:active {
+.btn:active,
+.btn--active {
   background-color: hsl(var(--clr-stc));
   color: hsl(var(--clr-dc));
 }
@@ -222,7 +232,7 @@ textarea {
 }
 
 .warning {
-  border: 0.15rem solid hsl(13, 70%, 61%);
+  border: 0.15rem solid hsl(var(--clr-warning));
 }
 
 .input::placeholder {
@@ -236,7 +246,7 @@ textarea {
 /* components */
 .header {
   place-content: center;
-  padding: clamp(2.5rem, 2rem + 5%, 10rem) 0 clamp(2.5rem, 2rem + 2%, 5.5rem) 0;
+  padding: clamp(2.5rem, 1rem + 10%, 10rem) 0 clamp(2.5rem, 7.5%, 5.5rem) 0;
 }
 
 .main {
@@ -270,6 +280,11 @@ label {
 .tipbtns {
   --gap: 1rem;
   grid-template-columns: 1fr 1fr;
+}
+
+.input-warning {
+  position: absolute;
+  inset: 0 0 auto auto;
 }
 
 .display-field {

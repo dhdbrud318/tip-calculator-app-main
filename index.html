@@ -22,7 +22,7 @@
       <div class="header-logo"><img src="./images/logo.svg" alt="Logo" /></div>
     </header>
 
-    <form class="main grid container bg-white">
+    <main class="main grid container bg-white">
       <div class="input_field flex">
         <div class="input-bill icon-inside">
           <label for="bill">Bill</label>
@@ -34,8 +34,8 @@
             maxlength="15"
             size="10"
             placeholder="0"
-            pattern="[0-9]+"
           />
+          <p class="input-warning fc-warning invisible">Invalid amount</p>
         </div>
 
         <div class="input-percent">
@@ -55,7 +55,7 @@
           </div>
         </div>
 
-        <div class="input_people icon-inside">
+        <div class="input-partySize icon-inside">
           <label for="percent">Number of People</label>
           <img
             src="./images/icon-person.svg"
@@ -63,12 +63,13 @@
             alt="Person Icon"
           />
           <input
-            type="number"
+            type="text"
             id="percent"
-            class="input input--people flex bg-extralight-cyan"
+            class="input input--size flex bg-extralight-cyan"
             placeholder="0"
             maxlength="15"
           />
+          <p class="input-warning fc-warning invisible">Invalid party size</p>
         </div>
       </div>
       <div class="display-field bg-dark-cyan flex">
@@ -86,13 +87,11 @@
             <p class="display-price fs-xl fc-str-cyan" id="total">0.00</p>
           </div>
         </div>
-        <input
-          type="reset"
-          value="reset"
-          class="display-reset btn btn--reset uppercase"
-        />
+        <button class="display-reset btn btn--reset uppercase" id="reset">
+          reset
+        </button>
       </div>
-    </form>
+    </main>
 
     <script src="./script.js"></script>
   </body>
